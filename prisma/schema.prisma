@@ -9,7 +9,8 @@ generator client {
 }
 
 model Business {
-    id    String  @id @default(cuid())
-    email String  @unique
-    name  String?
+    id       String  @id @default(cuid())
+    email    String  @unique
+    name     String?
+    username String
 }
