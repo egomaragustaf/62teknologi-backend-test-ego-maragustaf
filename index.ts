@@ -10,7 +10,7 @@ const app: Express = express();
 const port = process.env.PORT;
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Yelp Clone');
+  res.send('This is Yelp Clone');
 });
 
 app.get('/business/search', async (req, res) => {
