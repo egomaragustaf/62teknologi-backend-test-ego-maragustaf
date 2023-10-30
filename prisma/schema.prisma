@@ -15,19 +15,26 @@ model Business {
     is_closed    Boolean
     review_count Int
     rating       Int
-    location     BusinessLocation[]
+    price        String
+    locations    BusinessLocation[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
 }
 
 model BusinessLocation {
-    id         String    @id @default(cuid())
-    address1   String?
-    address2   String?
-    city       String?
-    zip_code   String?
-    country    String?
-    state      String?
-    business   Business? @relation(fields: [businessId], references: [id], onUpdate: Cascade, onDelete: Cascade)
-    businessId String?
+    id         String   @id @default(cuid())
+    address1   String
+    address2   String
+    city       String
+    zip_code   String
+    country    String
+    state      String
+    business   Business @relation(fields: [businessId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+    businessId String
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
 
     @@index([businessId])
 }
