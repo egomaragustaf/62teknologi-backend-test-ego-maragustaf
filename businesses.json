@@ -1,0 +1,243 @@
+[
+    {
+      "alias": "anytime-kitchen-new-york-2",
+      "name": "Anytime Kitchen",
+      "is_closed": false,
+      "review_count": 2746,
+      "rating": 4.5,
+      "price": "$$",
+      "location": {
+        "address1": "23 W 32nd St",
+        "address2": "Fl 3",
+        "city": "New York",
+        "zip_code": "10001",
+        "country": "US",
+        "state": "NY"
+      }
+    },
+    {
+      "alias": "tasty-bites-los-angeles",
+      "name": "Tasty Bites",
+      "is_closed": false,
+      "review_count": 2000,
+      "rating": 4.2,
+      "price": "$$",
+      "location": {
+        "address1": "123 Main St",
+        "address2": "Suite 101",
+        "city": "Los Angeles",
+        "zip_code": "90001",
+        "country": "US",
+        "state": "CA"
+      }
+    },
+    {
+      "alias": "delicious-eats-chicago",
+      "name": "Delicious Eats",
+      "is_closed": false,
+      "review_count": 1500,
+      "rating": 4.0,
+      "price": "$$$",
+      "location": {
+        "address1": "456 Elm St",
+        "address2": "Suite 200",
+        "city": "Chicago",
+        "zip_code": "60601",
+        "country": "US",
+        "state": "IL"
+      }
+    },
+    {
+      "alias": "flavorsome-grill-houston",
+      "name": "Flavorsome Grill",
+      "is_closed": false,
+      "review_count": 1800,
+      "rating": 4.1,
+      "price": "$$",
+      "location": {
+        "address1": "789 Oak St",
+        "address2": "Suite 300",
+        "city": "Houston",
+        "zip_code": "77001",
+        "country": "US",
+        "state": "TX"
+      }
+    },
+    {
+      "alias": "casa-de-sabores-miami",
+      "name": "Casa de Sabores",
+      "is_closed": false,
+      "review_count": 2100,
+      "rating": 4.3,
+      "price": "$$$",
+      "location": {
+        "address1": "567 Palm Ave",
+        "address2": "Suite 400",
+        "city": "Miami",
+        "zip_code": "33101",
+        "country": "US",
+        "state": "FL"
+      }
+    },
+    {
+      "alias": "yum-yum-cafe-san-francisco",
+      "name": "Yum Yum Cafe",
+      "is_closed": false,
+      "review_count": 2200,
+      "rating": 4.4,
+      "price": "$$",
+      "location": {
+        "address1": "101 Market St",
+        "address2": "Fl 2",
+        "city": "San Francisco",
+        "zip_code": "94101",
+        "country": "US",
+        "state": "CA"
+      }
+    },
+    {
+      "alias": "spicy-delights-seattle",
+      "name": "Spicy Delights",
+      "is_closed": false,
+      "review_count": 1600,
+      "rating": 4.0,
+      "price": "$$",
+      "location": {
+        "address1": "333 Pine St",
+        "address2": "Suite 201",
+        "city": "Seattle",
+        "zip_code": "98101",
+        "country": "US",
+        "state": "WA"
+      }
+    },
+    {
+      "alias": "savory-bites-boston",
+      "name": "Savory Bites",
+      "is_closed": false,
+      "review_count": 1900,
+      "rating": 4.2,
+      "price": "$$$",
+      "location": {
+        "address1": "555 Elm St",
+        "address2": "Suite 202",
+        "city": "Boston",
+        "zip_code": "02101",
+        "country": "US",
+        "state": "MA"
+      }
+    },
+    {
+      "alias": "gourmet-feast-dallas",
+      "name": "Gourmet Feast",
+      "is_closed": false,
+      "review_count": 1700,
+      "rating": 4.1,
+      "price": "$$",
+      "location": {
+        "address1": "777 Oak St",
+        "address2": "Suite 301",
+        "city": "Dallas",
+        "zip_code": "75201",
+        "country": "US",
+        "state": "TX"
+      }
+    },
+    {
+      "alias": "delightful-diner-atlanta",
+      "name": "Delightful Diner",
+      "is_closed": false,
+      "review_count": 2000,
+      "rating": 4.3,
+      "price": "$$$",
+      "location": {
+        "address1": "999 Peachtree St",
+        "address2": "Suite 400",
+        "city": "Atlanta",
+        "zip_code": "30301",
+        "country": "US",
+        "state": "GA"
+      }
+    },
+    {
+      "alias": "flavorful-cafe-phoenix",
+      "name": "Flavorful Cafe",
+      "is_closed": false,
+      "review_count": 1800,
+      "rating": 4.2,
+      "price": "$$",
+      "location": {
+        "address1": "444 Market St",
+        "address2": "Fl 2",
+        "city": "Phoenix",
+        "zip_code": "85001",
+        "country": "US",
+        "state": "AZ"
+      }
+    },
+    {
+      "alias": "taste-of-italy-detroit",
+      "name": "Taste of Italy",
+      "is_closed": false,
+      "review_count": 2100,
+      "rating": 4.4,
+      "price": "$$",
+      "location": {
+        "address1": "666 Main St",
+        "address2": "Suite 203",
+        "city": "Detroit",
+        "zip_code": "48201",
+        "country": "US",
+        "state": "MI"
+      }
+    },
+    {
+      "alias": "southern-flavors-new-orleans",
+      "name": "Southern Flavors",
+      "is_closed": false,
+      "review_count": 1900,
+      "rating": 4.1,
+      "price": "$$$",
+      "location": {
+        "address1": "222 Canal St",
+        "address2": "Suite 402",
+        "city": "New Orleans",
+        "zip_code": "70101",
+        "country": "US",
+        "state": "LA"
+      }
+    },
+    {
+      "alias": "tasty-treats-austin",
+      "name": "Tasty Treats",
+      "is_closed": false,
+      "review_count": 2200,
+      "rating": 4.3,
+      "price": "$$",
+      "location": {
+        "address1": "777 Congress Ave",
+        "address2": "Suite 404",
+        "city": "Austin",
+        "zip_code": "73301",
+        "country": "US",
+        "state": "TX"
+      }
+    },
+    {
+      "alias": "delicious-bites-san-diego",
+      "name": "Delicious Bites",
+      "is_closed": false,
+      "review_count": 1600,
+      "rating": 4.0,
+      "price": "$$$",
+      "location": {
+        "address1": "999 Harbor Dr",
+        "address2": "Suite 500",
+        "city": "San Diego",
+        "zip_code": "92101",
+        "country": "US",
+        "state": "CA"
+      }
+    }
+  ]
+  
