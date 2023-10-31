@@ -5,7 +5,9 @@ const prisma = new PrismaClient();
 
 async function main() {
   for (const business of dataBusinesses) {
-    const newBusinesses = await prisma.business.create({
+    const locations = business.location
+
+    const businesses = await prisma.business.create({
       data: {
         alias: business.alias,
         name: business.name,
@@ -14,15 +16,19 @@ async function main() {
         rating: business.rating,
         price: business.price,
         locations: {
-            create: business.location
-          }
+          create: {
+            address1: locations.address1,
+            address2: locations.address2,
+            city: locations.city,
+            zip_code: locations.zip_code,
+            country: locations.country,
+            state: locations.state,
+          },
         },
-        include: {
-          locations: true
         }
       });
 
-    console.log("✅ Seeded data:", newBusinesses);
+    console.log("✅ Seeded data:", businesses);
   }
 }
 
