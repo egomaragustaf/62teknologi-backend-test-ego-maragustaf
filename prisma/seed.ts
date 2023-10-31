@@ -4,6 +4,10 @@ import dataBusinesses from "./businesses.json";
 const prisma = new PrismaClient();
 
 async function main() {
+  await prisma.business.deleteMany();
+  
+  await prisma.businessLocation.deleteMany();
+
   for (const business of dataBusinesses) {
     const locations = business.location
 
