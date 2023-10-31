@@ -6,7 +6,7 @@
       "review_count": 2746,
       "rating": 4.5,
       "price": "$$",
-      "location": {
+      "locations": {
         "address1": "23 W 32nd St",
         "address2": "Fl 3",
         "city": "New York",
@@ -22,7 +22,7 @@
       "review_count": 2000,
       "rating": 4.2,
       "price": "$$",
-      "location": {
+      "locations": {
         "address1": "123 Main St",
         "address2": "Suite 101",
         "city": "Los Angeles",
@@ -38,7 +38,7 @@
       "review_count": 1500,
       "rating": 4.0,
       "price": "$$$",
-      "location": {
+      "locations": {
         "address1": "456 Elm St",
         "address2": "Suite 200",
         "city": "Chicago",
@@ -54,7 +54,7 @@
       "review_count": 1800,
       "rating": 4.1,
       "price": "$$",
-      "location": {
+      "locations": {
         "address1": "789 Oak St",
         "address2": "Suite 300",
         "city": "Houston",
@@ -70,7 +70,7 @@
       "review_count": 2100,
       "rating": 4.3,
       "price": "$$$",
-      "location": {
+      "locations": {
         "address1": "567 Palm Ave",
         "address2": "Suite 400",
         "city": "Miami",
@@ -86,7 +86,7 @@
       "review_count": 2200,
       "rating": 4.4,
       "price": "$$",
-      "location": {
+      "locations": {
         "address1": "101 Market St",
         "address2": "Fl 2",
         "city": "San Francisco",
@@ -102,7 +102,7 @@
       "review_count": 1600,
       "rating": 4.0,
       "price": "$$",
-      "location": {
+      "locations": {
         "address1": "333 Pine St",
         "address2": "Suite 201",
         "city": "Seattle",
@@ -118,7 +118,7 @@
       "review_count": 1900,
       "rating": 4.2,
       "price": "$$$",
-      "location": {
+      "locations": {
         "address1": "555 Elm St",
         "address2": "Suite 202",
         "city": "Boston",
@@ -134,7 +134,7 @@
       "review_count": 1700,
       "rating": 4.1,
       "price": "$$",
-      "location": {
+      "locations": {
         "address1": "777 Oak St",
         "address2": "Suite 301",
         "city": "Dallas",
@@ -150,7 +150,7 @@
       "review_count": 2000,
       "rating": 4.3,
       "price": "$$$",
-      "location": {
+      "locations": {
         "address1": "999 Peachtree St",
         "address2": "Suite 400",
         "city": "Atlanta",
@@ -166,7 +166,7 @@
       "review_count": 1800,
       "rating": 4.2,
       "price": "$$",
-      "location": {
+      "locations": {
         "address1": "444 Market St",
         "address2": "Fl 2",
         "city": "Phoenix",
@@ -182,7 +182,7 @@
       "review_count": 2100,
       "rating": 4.4,
       "price": "$$",
-      "location": {
+      "locations": {
         "address1": "666 Main St",
         "address2": "Suite 203",
         "city": "Detroit",
@@ -198,7 +198,7 @@
       "review_count": 1900,
       "rating": 4.1,
       "price": "$$$",
-      "location": {
+      "locations": {
         "address1": "222 Canal St",
         "address2": "Suite 402",
         "city": "New Orleans",
@@ -214,7 +214,7 @@
       "review_count": 2200,
       "rating": 4.3,
       "price": "$$",
-      "location": {
+      "locations": {
         "address1": "777 Congress Ave",
         "address2": "Suite 404",
         "city": "Austin",
@@ -230,7 +230,7 @@
       "review_count": 1600,
       "rating": 4.0,
       "price": "$$$",
-      "location": {
+      "locations": {
         "address1": "999 Harbor Dr",
         "address2": "Suite 500",
         "city": "San Diego",
