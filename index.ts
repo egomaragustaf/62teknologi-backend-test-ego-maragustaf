@@ -16,6 +16,9 @@ app.get("/", (req: Request, res: Response) => {
 app.get("/business/search", async (req, res) => {
   const businesses = await prisma.business.findMany({
     take: 15,
+    include: {
+      locations: true,
+    },
   });
   res.json(businesses);
 });
