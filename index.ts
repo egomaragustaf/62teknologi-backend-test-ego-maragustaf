@@ -59,6 +59,17 @@ app.post("/business/add", async (req: Request, res: Response) => {
   res.json(addBusinesses);
 });
 
+app.put("/business/:id/edit", async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const editBusinesses = await prisma.business.update({
+    where: { id },
+    data: {
+      is_closed: true,
+    }
+  });
+  res.json(editBusinesses);
+});
+
 app.delete("/business/:id/delete", async (req: Request, res: Response) => {
   const { id } = req.params;
   const deleteBusinesses = await prisma.business.delete({
