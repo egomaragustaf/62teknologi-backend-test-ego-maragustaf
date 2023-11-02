@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { Prisma, PrismaClient } from "@prisma/client";
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 
@@ -14,8 +14,48 @@ app.get("/business", (req: Request, res: Response) => {
 });
 
 app.get("/business/search", async (req: Request, res: Response) => {
+  const { limit, offset, q } = req.query;
+
+  const limitValue = parseInt(limit as string, 10) || 15;
+  const offsetValue = parseInt(offset as string, 5) || 0;
+
+  const searchFilter: Prisma.BusinessWhereInput = {
+    OR: [
+      {
+        name: {
+          contains: q?.toString(),
+        },
+      },
+      {
+        alias: {
+          contains: q?.toString(),
+        },
+      },
+      {
+        locations: {
+          some: {
+            OR: [
+              {
+                city: {
+                  contains: q?.toString(),
+                },
+              },
+              {
+                zip_code: {
+                  contains: q?.toString(),
+                },
+              },
+            ],
+          },
+        },
+      },
+    ],
+  };
+
   const businesses = await prisma.business.findMany({
-    take: 15,
+    take: limitValue,
+    skip: offsetValue,
+    where: searchFilter,
     include: {
       locations: true,
     },
