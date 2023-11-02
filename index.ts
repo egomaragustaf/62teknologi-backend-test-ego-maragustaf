@@ -9,6 +9,8 @@ const prisma = new PrismaClient();
 const app: Express = express();
 const port = process.env.PORT;
 
+app.use(express.json())
+
 app.get("/", (req: Request, res: Response) => {
   res.send("Yelp Clone by Ego Maragustaf");
 });
@@ -24,52 +26,29 @@ app.get("/business", async (req: Request, res: Response) => {
 });
 
 app.get("/business/search", async (req: Request, res: Response) => {
-  const { limit, offset, q } = req.query;
+  const { limit, offset, q, sort_by } = req.query;
 
-  const limitValue = parseInt(limit as string, 10) || 15;
-  const offsetValue = parseInt(offset as string, 5) || 0;
-
-  const searchFilter: Prisma.BusinessWhereInput = {
-    OR: [
-      {
-        name: {
-          contains: q?.toString(),
-        },
-      },
-      {
-        alias: {
-          contains: q?.toString(),
-        },
-      },
-      {
-        locations: {
-          some: {
-            OR: [
-              {
-                city: {
-                  contains: q?.toString(),
-                },
-              },
-              {
-                zip_code: {
-                  contains: q?.toString(),
-                },
-              },
-            ],
-          },
-        },
-      },
-    ],
-  };
+   const or: Prisma.BusinessWhereInput = q
+    ? {
+        OR: [
+          { alias: { contains: q as string } },
+          { name: { contains: q as string } },
+        ],
+      }
+    : {}
 
   const businesses = await prisma.business.findMany({
-    take: limitValue,
-    skip: offsetValue,
-    where: searchFilter,
-    include: {
-      locations: true,
+    where: {
+      is_closed: false,
+      ...or,
     },
-  });
+    include: { locations: true },
+    take: Number(limit) || undefined,
+    skip: Number(offset) || undefined,
+    orderBy: {
+      updatedAt: sort_by as Prisma.SortOrder,
+    },
+  })
   res.json(businesses);
 });
 
