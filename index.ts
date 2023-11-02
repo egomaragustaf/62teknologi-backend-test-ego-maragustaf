@@ -9,8 +9,18 @@ const prisma = new PrismaClient();
 const app: Express = express();
 const port = process.env.PORT;
 
-app.get("/business", (req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
   res.send("Yelp Clone by Ego Maragustaf");
+});
+
+app.get("/business", async (req: Request, res: Response) => {
+  const businesses = await prisma.business.findMany({
+    take: 15,
+    include: {
+      locations: true,
+    },
+  });
+  res.json(businesses);
 });
 
 app.get("/business/search", async (req: Request, res: Response) => {
