@@ -1,4 +1,4 @@
-# REST API
+# REST API YELP CLONE
 
 This example shows how to implement a **REST API with TypeScript** using [Express](https://expressjs.com/) and [Prisma Client](https://www.prisma.io/docs/concepts/components/prisma-client). The example uses an SQLite database file with some initial dummy data which you can find at [`./prisma/dev.db`](./prisma/dev.db).
 
@@ -9,14 +9,14 @@ This example shows how to implement a **REST API with TypeScript** using [Expres
 Download this example:
 
 ```
-npx try-prisma@latest --template typescript/rest-express
+pnpm dlx try-prisma@latest --template typescript/rest-express
 ```
 
-Install npm dependencies:
+Install pnpm dependencies:
 
 ```
 cd rest-express
-npm install
+pnpm install
 ```
 
 <details><summary><strong>Alternative:</strong> Clone the entire repo</summary>
@@ -41,7 +41,7 @@ pnpm install
 Run the following command to create your SQLite database file. This also creates the `User` and `Post` tables that are defined in [`prisma/schema.prisma`](./prisma/schema.prisma):
 
 ```
-npx prisma migrate dev --name init
+pnpm dlx prisma migrate dev --name init
 ```
 
 When `npx prisma migrate dev` is executed against a newly created database, seeding is also triggered. The seed file in [`prisma/seed.ts`](./prisma/seed.ts) will be executed and your database will be populated with the sample data.
@@ -49,7 +49,7 @@ When `npx prisma migrate dev` is executed against a newly created database, seed
 ### 3. Start the REST API server
 
 ```
-npm run dev
+pnpm run dev
 ```
 
 The server is now running on `http://localhost:3000`. You can now run the API requests, e.g. [`http://localhost:3000/feed`](http://localhost:3000/feed).
@@ -60,21 +60,21 @@ You can access the REST API of the server using the following endpoints:
 
 ### `GET`
 
-- `/business/:id`: Fetch a single post by its `id`
-- `/business/search?searchString={searchString}&take={take}&skip={skip}&orderBy={orderBy}`: Fetch all _published_ posts
+- `/business/:id`: Fetch a single business by its `id`
+- `/business/search?q={searchString}&limit={limit}&offset={offset}&sort_by={sort_by}`: Fetch all _published_ businesses
   - Query Parameters
-    - `searchString` (optional): This filters posts by `title` or `content`
-    - `take` (optional): This specifies how many objects should be returned in the list
-    - `skip` (optional): This specifies how many of the returned objects in the list should be skipped
-    - `orderBy` (optional): The sort order for posts in either ascending or descending order. The value can either `asc` or `desc`
+    - `q` (optional): This filters businesses by `title` or `content`
+    - `limit` (optional): This specifies how many objects should be returned in the list
+    - `offset` (optional): This specifies how many of the returned objects in the list should be offsetped
+    - `sort_by` (optional): The sort order for businesses in either ascending or descending order. The value can either `asc` or `desc`
 
 ### `POST`
 
 - `/business/add`: Create a new business
   - Body:
-    - `name: String` (required): The name of the post
-    - `locations: String` (optional): The locations of the post
-    - `alias: String` (required): The alias of the user that creates the post
+    - `name: String` (required): The name of the businesses
+    - `locations: String`: The locations of the businesses
+    - `alias: String` (required): The alias the slug of the businesses
 
 ### `PUT`
 
