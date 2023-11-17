@@ -65,24 +65,28 @@ app.get("/business/:id", async (req: Request, res: Response) => {
 
 // Add data without form
 app.post("/business/add", async (req: Request, res: Response) => {
+  const {alias, name, is_closed, review_count, rating, price, locations} = req.body
   const addBusinesses = await prisma.business.create({
     data: {
-      alias: "delicious-eats-chicago",
-      name: "Delicious Eats",
-      is_closed: false,
-      review_count: 1500,
-      rating: 4.0,
-      price: "$$$",
+      alias,
+      name,
+      is_closed,
+      review_count,
+      rating,
+      price,
       locations: {
         create: {
-          address1: "456 Elm St",
-          address2: "Suite 200",
-          city: "Chicago",
-          zip_code: "60601",
-          country: "US",
-          state: "IL",
+          address1: locations.address1,
+          address2: locations.address2,
+          city: locations.city,
+          zip_code: locations.zip_code,
+          country: locations.country,
+          state: locations.state,
         },
       },
+    },
+    include: {
+      locations: true, // Include the locations in the response
     },
   });
   res.json(addBusinesses);

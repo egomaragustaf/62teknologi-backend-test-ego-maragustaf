@@ -24,12 +24,12 @@ model Business {
 
 model BusinessLocation {
     id         String    @id @default(cuid())
-    address1   String
+    address1   String?
     address2   String?
-    city       String
-    zip_code   String
-    country    String
-    state      String
+    city       String?
+    zip_code   String?
+    country    String?
+    state      String?
     business   Business? @relation(fields: [businessId], references: [id], onUpdate: Cascade, onDelete: Cascade)
     businessId String?
 
